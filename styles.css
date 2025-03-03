@@ -1,5 +1,6 @@
 *{
     margin: 0px;
+    overflow-x: hidden;
 }
 
 #logo{
@@ -7,6 +8,10 @@
     position: absolute;
     top: 15px;
     left: 30px
+}
+
+#logo:hover{
+    cursor: pointer;
 }
 
 #nav_bar{
@@ -36,30 +41,44 @@
 #shop{
     position: relative;
     top: 0%;
-    mask-image: linear-gradient(transparent, black, black, black, black, transparent);
+    mask-image: linear-gradient(transparent, black, black, black, transparent);
 }
+
+#scroller{
+    display:block;
+    width: max-content;
+    max-height: 240px;
+    overflow:hidden;
+}
+
+
 
 #haircut_gallery{
     display: flex;
     margin-top: 25px;
     justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    flex-wrap: nowrap;
+    
 
 }
 
 .haircut_img{
     max-height: 230px;
     animation-name: scroll_left;
-    animation-duration: 60s;
+    animation-duration: 50s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     position: relative;
     margin:10px;
+    border-radius: 20%;
     left: 0%;
 }
 
 @keyframes scroll_left {
     to {
-        left: -800px;
+        left: -50%;
     }
 }
 
@@ -68,16 +87,18 @@
     cursor: pointer;
     transition-duration: .15s;
     border-radius: 20%;
+    translate: 0px -20px;
     box-shadow: 10px 10px gray;
+    animation-play-state: paused;
 }
 
 #hours{
-    color: black;
+    color: rgb(255, 255, 255);
     position: absolute;
     top: 255px;
     right: 60px;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(blue, rgba(203, 206, 182, 0.451), transparent,transparent, rgba(203, 206, 182, 0.451), blue);
+    background-image: linear-gradient(5deg,rgba(28, 23, 158, 0.785),transparent, rgba(28, 23, 158, 0.785), transparent);
     padding: 15px;
     border: solid black 1px;
     border-radius: 5%;
@@ -92,4 +113,5 @@
     border-radius: 20%;
     box-shadow: 10px 10px gray;
 }
+
 
